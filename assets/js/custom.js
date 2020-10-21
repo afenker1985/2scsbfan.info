@@ -203,7 +203,8 @@
 			console.log(albums);
 
 			console.log(".filtr-container");
-
+			
+			document.getElementsByClassName("filtr-container").innerHTML(albums);
 			document.getElementsByClassName("filtr-container").innerHTML = "" + albums;
 
 			console.log(".filtr-container");
