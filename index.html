@@ -293,14 +293,14 @@
 				}
 			});
 		
-			document.getElementById("filter-options").innerHTML = "<li class=\"active\" data-filter=\"all\">All</li>" + albums.join("");
+			document.getElementById("filter-options").innerHTML = "<li data-filter=\"all\" class=\"active\">All</li>" + albums.join("");
 
 		});
 
 		$('.filtr-container').filterizr();
 
 		//Simple filter controls
-		console.log($('#mu-simplefilter li'));
+		console.log($('.mu-simplefilter li'));
 		console.log($('.mu-simplefilter'));
 	    $('.mu-simplefilter li').click(function() {
 			alert("PASS!");
