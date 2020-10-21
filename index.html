@@ -295,12 +295,13 @@
 			document.getElementById("filter-options").innerHTML = "<li class=\"active\" data-filter=\"all\">All</li>" + albums.join("");
 
 		});
-		
+
 		$('.filtr-container').filterizr();
 
 		//Simple filter controls
 
 	    $('.mu-simplefilter li').click(function() {
+			alert("PASS!");
 	        $('.mu-simplefilter li').removeClass('active');
 	        $(this).addClass('active');
 	    });
