@@ -128,7 +128,7 @@
 							<!-- Start Album Filter -->
 							
 							<div class="mu-portfolio-filter-area">
-								<ul class="mu-simplefilter">
+								<ul class="mu-simplefilter" id="filter-options">
 
 					                
 					            </ul>
@@ -293,17 +293,15 @@
 				}
 			});
 		
-			document.getElementsByClassName ("mu-simplefilter").innerHTML = "<li data-filter=\"all\" class=\"active\">All</li>" + albums.join("");
+			document.getElementById("filter-options").innerHTML = "<li data-filter=\"all\" class=\"active\">All</li>" + albums.join("");
 
 		});
 
 		$('.filtr-container').filterizr();
 
 		//Simple filter controls
-		console.log($('#filter-options li'));
-		console.log($('.mu-simplefilter li'));
+		console.log($('#filter-options'));
 		console.log($('.mu-simplefilter'));
-
 	    $('.mu-simplefilter li').click(function() {
 			alert("PASS!");
 	        $('.mu-simplefilter li').removeClass('active');
