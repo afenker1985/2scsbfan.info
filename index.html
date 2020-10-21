@@ -295,15 +295,14 @@
 
 	
 	<script type="text/javascript">
-		document.write("TEST1");
 		$.getJSON( "assets/db/albums.json", function( data ) {
-			document.write("TEST2");
-			
 			var albums = [];
 			
 			$.each( data, function (key, val) {
-				document.write(key);
-				albums.push( "<li> data-filter='" + key + "'>" + val + "</li>" );
+				if (Number.isInteger(key)) {
+					document.innerHTML(key);
+					albums.push( "<li> data-filter='" + key + "'>" + val + "</li>" );
+				}
 			});
 		
 			document.getElementById("filter-options").innerHTML = "<li class=\"active\" data-filter=\"all\">All</li>" + albums;
