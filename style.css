@@ -736,7 +736,7 @@ button:focus {
     height: 0px;
     padding: 0;
     width: 0px;
-    line-height: 35px;
+    line-height: 0px;
     display: inline-block;
     font-size: 15px;
     margin-right: 10px;
