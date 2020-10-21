@@ -202,8 +202,6 @@
 			console.log(albums);
 
 			document.getElementsByClassName("filtr-container1").innerHTML = "" + albums;
-
-			//console.log($('.filtr-item'));
 			
 			$('.mu-filter-imglink').magnificPopup({
 				type: 'image',
