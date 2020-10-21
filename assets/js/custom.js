@@ -201,7 +201,7 @@
 		
 			document.getElementsByClassName("filtr-container1").innerHTML = albums.join("");
 
-			console.log($('.filtr-container1 div'));
+			console.log($('.filtr-container1'));
 			console.log($('.filtr-item'));
 			
 			$('.mu-filter-imglink').magnificPopup({
