@@ -194,11 +194,15 @@
 					albums.push( "<a class='mu-filter-imglink' href='assets/" + val["slug"] + ".jpg' title='" + val["title"] + "'><i class='fa fa-info-circle'></i></a>" );
 					albums.push( "</div>" );
 					albums.push( "</div>" );
-					console.log(albums);
 				}
 			});
 		    
-		
+			console.log(albums);
+
+			albums = albums.join("");
+
+			console.log(albums);
+
 			document.getElementsByClassName("filtr-container1").innerHTML = albums.join("");
 
 			console.log($('.filtr-container1'));
