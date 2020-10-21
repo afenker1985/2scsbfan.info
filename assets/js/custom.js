@@ -194,13 +194,15 @@
 					albums.push( "<a class='mu-filter-imglink' href='assets/" + val["slug"] + ".jpg' title='" + val["title"] + "'><i class='fa fa-info-circle'></i></a>" );
 					albums.push( "</div>" );
 					albums.push( "</div>" );
+					console.log(key);
 				}
 			});
-		                
+		    
 		
 			document.getElementsByClassName("filtr-container1").innerHTML = albums.join("");
 
 			console.log($('.filtr-container1'));
+			console.log($('.filtr-item'));
 			
 			$('.mu-filter-imglink').magnificPopup({
 				type: 'image',
