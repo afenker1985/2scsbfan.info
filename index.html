@@ -126,9 +126,11 @@
 							</div>
 
 							<!-- Start Album Filter -->
+							
 							<div class="mu-portfolio-filter-area">
-								<ul class="mu-simplefilter">
-					                <li class="active" data-filter="all">All</li>
+								<ul class="mu-simplefilter" id="filter-options" onload="loadfilter()">
+									
+									
 					                <li data-filter="1">Southern Soldier</li>
 					                <li data-filter="2">Hard Road</li>
 					                <li data-filter="3">In High Cotton</li>
@@ -292,7 +294,22 @@
 	<script type="text/javascript" src="assets/js/custom.js"></script>
 
 	
-	
+	<script type="text/javascript">
+		document.write("TEST1");
+		$.getJSON( "assets/db/albums.json", function( data ) {
+			document.write("TEST2");
+			
+			var albums = [];
+			
+			$.each( data, function (key, val) {
+				document.write(key);
+				albums.push( "<li> data-filter='" + key + "'>" + val + "</li>" );
+			});
+		
+			document.getElementById("filter-options").innerHTML = "<li class=\"active\" data-filter=\"all\">All</li>" + albums;
+
+		});
+</script>
     
   </body>
 </html>
