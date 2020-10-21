@@ -198,14 +198,11 @@
 				}
 			});
 
-			albums = albums.join("");
-
 			console.log(albums);
 
 			console.log(".filtr-container");
 			
-			document.getElementsByClassName("filtr-container").innerHTML(albums);
-			document.getElementsByClassName("filtr-container").innerHTML = "" + albums;
+			document.getElementsByClassName("filtr-container").innerHTML = albums.join("");
 
 			console.log(".filtr-container");
 			
