@@ -155,14 +155,29 @@
 	/* ----------------------------------------------------------- */
 	/*  6. PORTFOLIO GALLERY
 	/* ----------------------------------------------------------- */ 
-		$('.filtr-container').filterizr();
-
 		//Simple filter controls
+	$(document).ready(function() { 
+		$.getJSON( "assets/db/albums.json", function( data ) {
+			var albums = [];
+			
+			$.each( data, function (key, val) {
+				if (Number.isInteger(parseInt(key))) {
+					albums.push( "<li data-filter='" + parseInt(key) + "'>" + val["title"] + "</li>" );
+				}
+			});
+		
+			document.getElementById("filter-options").innerHTML = "<li data-filter=\"all\" class=\"active\">All</li>" + albums.join("");
+			
+			$('.filtr-container').filterizr();
 
-	    $('.mu-simplefilter li').click(function() {
-	        $('.mu-simplefilter li').removeClass('active');
-	        $(this).addClass('active');
-	    });
+			$('.mu-simplefilter li').click(function() {
+
+		        $('.mu-simplefilter li').removeClass('active');
+		        $(this).addClass('active');
+		
+			});
+		});
+	});
 
 	/* ----------------------------------------------------------- */
 	/*  7. PORTFOLIO POPUP VIEW ( IMAGE LIGHTBOX )
