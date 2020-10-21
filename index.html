@@ -264,7 +264,23 @@
 	
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	
+	<script type="text/javascript">
+		$.getJSON( "assets/db/albums.json", function( data ) {
+			var albums = [];
+			
+			$.each( data, function (key, val) {
+				if (Number.isInteger(parseInt(key))) {
+					albums.push( "<li data-filter=\"" + parseInt(key) + "\">" + val["title"] + "</li>" );
+				}
+			});
+		
+			document.getElementById("filter-options").innerHTML = "<li class=\"active\" data-filter=\"all\">All</li>" + albums.join("");
+
+		});
+	</script>
+
     <!-- Bootstrap -->
     <script src="assets/js/bootstrap.min.js"></script>
 	<!-- Slick slider -->
@@ -285,22 +301,5 @@
 	
     <!-- Custom js -->
 	<script type="text/javascript" src="assets/js/custom.js"></script>
-
-	
-	<script type="text/javascript">
-		$.getJSON( "assets/db/albums.json", function( data ) {
-			var albums = [];
-			
-			$.each( data, function (key, val) {
-				if (Number.isInteger(parseInt(key))) {
-					albums.push( "<li data-filter=\"" + key + "\">" + val["title"] + "</li>" );
-				}
-			});
-		
-			document.getElementById("filter-options").innerHTML = "<li class=\"active\" data-filter=\"all\">All</li>" + albums.join("");
-
-		});
-</script>
-    
   </body>
 </html>
