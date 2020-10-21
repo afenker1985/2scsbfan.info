@@ -196,14 +196,12 @@
 					albums.push( "</div>" );
 				}
 			});
-		    
-			console.log(albums);
 
 			albums = albums.join("");
 
 			console.log(albums);
 
-			document.getElementsByClassName("filtr-container1").innerHTML = albums.join("");
+			document.getElementsByClassName("filtr-container1").innerHTML = albums;
 
 			console.log($('.filtr-container1'));
 			console.log($('.filtr-item'));
