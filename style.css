@@ -732,10 +732,10 @@ button:focus {
 	border-radius: 50%;
     background: #1b1c29;
     color: #fff;
-    height: 0px;
-    padding: 0;
-    width: 0px;
-    line-height: 0px;
+    height: 35px;
+    padding: 0 6px;
+    width: 35px;
+    line-height: 35px;
     display: inline-block;
     font-size: 15px;
     margin-right: 10px;
