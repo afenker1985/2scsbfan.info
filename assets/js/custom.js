@@ -180,6 +180,7 @@
 	/* ----------------------------------------------------------- */
 	/*  7. ALBUM GALLERY CONTROLS ( IMAGE LIGHTBOX )
 	/* ----------------------------------------------------------- */ 
+	$(function() {
 		$.getJSON( "assets/db/albums.json", function( data ) {
 			var albums = [];
 			
@@ -211,6 +212,7 @@
 				}
 			  });
 		});
+	});
 
 		$('.mu-filter-imglink').magnificPopup({
 			type: 'image',
