@@ -201,14 +201,14 @@ console.log(albums);
 
 			console.log(albums);
 
-var album-tester = "Test value<br />";
+var albumtester = "Test value<br />";
 
 			console.log(".filtr-container");
 			
 
-document.getElementsByClassName("filtr-container").innerHTML = album-tester;
+document.getElementsByClassName("filtr-container").innerHTML = albumtester;
 
-			document.getElementsByClassName("filtr-container").innerHTML = album-tester + albums.join("") + album-tester;
+			document.getElementsByClassName("filtr-container").innerHTML = album-tester + albums.join("") + albumtester;
 
 			console.log(".filtr-container");
 			
@@ -263,8 +263,3 @@ document.getElementsByClassName("filtr-container").innerHTML = album-tester;
 
 	
 })( jQuery );
-
-
-
-  
-	
