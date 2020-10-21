@@ -9,9 +9,7 @@
     "label": "Palmetto Productions",
     "release_date": "1997-07-04",
     "total_length": 4384,
-    "is_active": 1,
-    "creation_date": "2014-12-05 18:23:33",
-    "last_modified": "2014-12-05 18:23:33"
+    "is_active": 1
   },
   "2": {
     "slug": "hard-road",
@@ -23,9 +21,7 @@
     "label": "Palmetto Productions",
     "release_date": "2001-07-15",
     "total_length": 4250,
-    "is_active": 1,
-    "creation_date": "2014-12-05 18:21:01",
-    "last_modified": "2014-12-05 19:26:09"
+    "is_active": 1
   },
   "3": {
     "slug": "in-high-cotton",
@@ -37,9 +33,7 @@
     "label": "Palmetto Productions",
     "release_date": "2002-09-15",
     "total_length": 3836,
-    "is_active": 1,
-    "creation_date": "2014-12-05 18:30:16",
-    "last_modified": "2014-12-05 19:26:32"
+    "is_active": 1
   },
   "4": {
     "slug": "dulcem-melodies",
@@ -51,9 +45,7 @@
     "label": "Palmetto Productions",
     "release_date": "2006-07-19",
     "total_length": 3864,
-    "is_active": 1,
-    "creation_date": "2014-12-05 18:28:09",
-    "last_modified": "2014-12-05 19:26:25"
+    "is_active": 1
   },
   "5": {
     "slug": "lightning-in-a-jar",
@@ -65,9 +57,7 @@
     "label": "Palmetto Productions",
     "release_date": "2008-01-01",
     "total_length": 7935,
-    "is_active": 1,
-    "creation_date": "2014-12-05 18:25:14",
-    "last_modified": "2014-12-05 19:26:18"
+    "is_active": 1
   },
   "6": {
     "slug": "strike-the-tent",
@@ -79,9 +69,7 @@
     "label": "Palmetto Productions",
     "release_date": "2013-07-04",
     "total_length": 3559,
-    "is_active": 1,
-    "creation_date": "2014-12-05 18:31:45",
-    "last_modified": "2014-12-05 19:26:36"
+    "is_active": 1
   },
   "7": {
     "slug": "aint-dead-yet",
@@ -93,9 +81,7 @@
     "label": "Palmetto Productions",
     "release_date": "2017-06-12",
     "total_length": 7020,
-    "is_active": 1,
-    "creation_date": "2020-10-18 21:40:15",
-    "last_modified": "2020-10-18 21:40:15"
+    "is_active": 1
   },
   "album_id": {
     "slug": "slug",
@@ -107,9 +93,7 @@
     "label": "label",
     "release_date": "release_date",
     "total_length": "total_length",
-    "is_active": "is_active",
-    "creation_date": "creation_date",
-    "last_modified": "last_modified"
+    "is_active": "is_active"
   },
   "_comment": {
     "original-album-schema" : "1-HR, 2-SS, 3-LIJ, 4-DM, 5-IHC, 6-ST, 7-ADY",
