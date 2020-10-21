@@ -283,6 +283,7 @@
     <script type="text/javascript" src="assets/js/jquery.lineProgressbar.js"></script>
 
 	<script type="text/javascript">
+	$("document").ready(function() { 
 		$.getJSON( "assets/db/albums.json", function( data ) {
 			var albums = [];
 			
@@ -304,7 +305,8 @@
 			alert("PASS!");
 	        $('.mu-simplefilter li').removeClass('active');
 	        $(this).addClass('active');
-	    });
+		});
+	});
 	</script>
 
     <!-- Custom js -->
