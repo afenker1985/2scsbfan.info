@@ -198,7 +198,9 @@
 			});
 		                
 		
-			document.getElementsByClassName("filtr-container").innerHTML = albums.join("");
+			document.getElementsByClassName("filtr-container1").innerHTML = albums.join("");
+
+			console.log($('.filtr-container1'));
 			
 			$('.mu-filter-imglink').magnificPopup({
 				type: 'image',
