@@ -128,16 +128,9 @@
 							<!-- Start Album Filter -->
 							
 							<div class="mu-portfolio-filter-area">
-								<ul class="mu-simplefilter" id="filter-options" onload="loadfilter()">
-									
-									
-					                <li data-filter="1">Southern Soldier</li>
-					                <li data-filter="2">Hard Road</li>
-					                <li data-filter="3">In High Cotton</li>
-					                <li data-filter="4">Dulcem Melodies</li>
-					                <li data-filter="5">Lightning in a Jar</li>
-									<li data-filter="6">Strike the Tent</li>
-									<li data-filter="7">Ain't Dead Yet!</li>
+								<ul class="mu-simplefilter" id="filter-options">
+
+					                
 					            </ul>
 							</div>
 
@@ -299,7 +292,7 @@
 			var albums = [];
 			
 			$.each( data, function (key, val) {
-				if (Number.isInteger(key)) {
+				if (Number.isInteger(parseInt(key))) {
 					document.innerHTML(key);
 					albums.push( "<li> data-filter='" + key + "'>" + val + "</li>" );
 				}
