@@ -194,7 +194,7 @@
 					albums.push( "<a class='mu-filter-imglink' href='assets/" + val["slug"] + ".jpg' title='" + val["title"] + "'><i class='fa fa-info-circle'></i></a>" );
 					albums.push( "</div>" );
 					albums.push( "</div>" );
-					alert(key);
+					console.log(albums);
 				}
 			});
 		    
