@@ -196,6 +196,7 @@
 					albums.push( "</div>" );
 					albums.push( "</div>" );
 				}
+console.log(albums);
 			});
 
 			console.log(albums);
