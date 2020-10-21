@@ -294,20 +294,26 @@
 			});
 		
 			document.getElementById("filter-options").innerHTML = "<li data-filter=\"all\" id=\"filter-option\" class=\"active\">All</li>" + albums.join("");
+			document.getElementById("filter-options").html( "<li data-filter=\"all\" id=\"filter-option\" class=\"active\">All</li>" + albums.join("") );
 
+			$('.filtr-container').filterizr();
+			
+			$('.mu-simplefilter li').click(function() {
+			alert("PASS!");
+	        $('.mu-simplefilter li').removeClass('active');
+	        $(this).addClass('active');
+			
 		});
 
-		$('.filtr-container').filterizr();
+		});
 
 		//Simple filter controls
 		console.log($('#filter-options'));
 		console.log($('.mu-simplefilter'));
 		console.log($('#filter-option'));
-	    $('.mu-simplefilter li').click(function() {
-			alert("PASS!");
-	        $('.mu-simplefilter li').removeClass('active');
-	        $(this).addClass('active');
-		});
+		console.log($('li'));
+
+	    
 	});
 	</script>
 
