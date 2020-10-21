@@ -293,7 +293,6 @@
 			
 			$.each( data, function (key, val) {
 				if (Number.isInteger(parseInt(key))) {
-					document.innerHTML(key);
 					albums.push( "<li> data-filter='" + key + "'>" + val + "</li>" );
 				}
 			});
