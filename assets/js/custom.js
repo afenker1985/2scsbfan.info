@@ -208,7 +208,7 @@ var albumtester = "Test value<br />";
 
 document.getElementsByClassName("filtr-container").innerHTML = albumtester;
 
-			document.getElementsByClassName("filtr-container").innerHTML = album-tester + albums.join("") + albumtester;
+			document.getElementsByClassName("filtr-container").innerHTML = albumtester + albums.join("") + albumtester;
 
 			console.log(".filtr-container");
 			
