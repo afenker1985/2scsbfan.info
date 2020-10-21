@@ -27,13 +27,18 @@ Version: 1.0
 /* BASIC TYPOGRAPHY */
 /*--------------------*/
 
+@font-face {
+	font-family: 'Soria';
+	src: url(assets/fonts/soria-font.ttf);
+  }
+
 body,
 html {
 	overflow-x:hidden;
 }
 
 body {
-	font-family: 'Soria', sans-serif;
+	font-family: 'Soria', serif;
 	font-size: 15px;
 	letter-spacing: 0.5px;
 	line-height: 1.5;
