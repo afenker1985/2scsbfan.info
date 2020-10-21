@@ -201,9 +201,14 @@ console.log(albums);
 
 			console.log(albums);
 
+var album-tester = "Test value<br />";
+
 			console.log(".filtr-container");
 			
-			document.getElementsByClassName("filtr-container").innerHTML = albums.join("");
+
+document.getElementsByClassName("filtr-container").innerHTML = album-tester;
+
+			document.getElementsByClassName("filtr-container").innerHTML = album-tester + albums.join("") + album-tester;
 
 			console.log(".filtr-container");
 			
