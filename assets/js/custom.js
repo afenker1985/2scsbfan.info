@@ -201,12 +201,12 @@ console.log(albums);
 
 			console.log(albums);
 
-var albumtester = "Test value<br />";
+			var albumtester = "Test value<br />";
 
-			console.log(".filtr-container");
+			console.log("div.filtr-container1");
 			
 
-document.getElementsByClassName("filtr-container").innerHTML = albumtester;
+			document.getElementsByClassName("filtr-container").innerHTML = albumtester;
 
 			document.getElementsByClassName("filtr-container").innerHTML = albumtester + albums.join("") + albumtester;
 
