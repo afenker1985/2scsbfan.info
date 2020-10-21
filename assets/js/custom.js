@@ -202,11 +202,11 @@
 
 			console.log(albums);
 
-			console.log("filtr-container");
+			console.log(".filtr-container");
 
 			document.getElementsByClassName("filtr-container").innerHTML = "" + albums;
 
-			console.log("filtr-container");
+			console.log(".filtr-container");
 			
 			$('.mu-filter-imglink').magnificPopup({
 				type: 'image',
