@@ -278,9 +278,9 @@ function create_track_listing ( album_list ) {
 	$.each( album_list, function (k, v) {
 		console.log("Album list: " + v + "\n");
 		
-		$.getJSON( "assets/db/albums_songs.json", function( data ) {
+		$.getJSON( "assets/db/album_songs.json", function( data ) {
 			console.log(data);
-			
+
 			var track_list = [];
 
 			$.each( data, function (key, val) {
