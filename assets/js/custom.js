@@ -47,10 +47,10 @@
 
 		var typed = new Typed('#typed', {
 		    stringsElement: '#typed-strings',
-		    typeSpeed: 20,
+		    typeSpeed: 30,
 			backSpeed: 40,
-			backDelay: 500,
-		    startDelay: 700,
+			backDelay: 300,
+		    startDelay: 500,
 		    loop: true,
 		    loopCount: Infinity
 		});
