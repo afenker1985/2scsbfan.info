@@ -184,12 +184,13 @@
 	/*  7. ALBUM GALLERY CONTROLS ( IMAGE LIGHTBOX )
 	/* ----------------------------------------------------------- */ 
 function gallery_controls() {
+
 		$(function() {
 		$.getJSON( "assets/db/albums.json", function( data ) {
 			var albums = [];
 
 			var album_list = [];
-			
+
 			$.each( data, function (key, val) {
 
 				if (Number.isInteger(parseInt(key)) && val["is_active"]==1) {
@@ -210,7 +211,6 @@ function gallery_controls() {
 					albums.push( "</div>" );
 						
 					album_list[key] = key;
-
 				}
 
 			});
@@ -275,8 +275,16 @@ function format_track_time ( t ) {
 }
 
 function create_track_listing ( album_number ) {
-	console.log("Album Number " + album_number);
+	
+	$.getJSON( "assets/db/albums_songs.json", function( data ) {
+		var track_list = [];
 
+		$.each( data, function (key, val) {
+			if (val["album_id"] = album_number) {
+				console.log(val["song_id"] + "\n" );
+			}
+		});
+	});
 }
 
 		/*$('.mu-filter-imglink').magnificPopup({
