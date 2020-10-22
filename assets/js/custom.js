@@ -229,28 +229,37 @@ function album_date ( date_string ) {
 }
 
 function format_album_time ( t ) {
-	console.log(t);
 	
-	full_hours = Math.floor(t / 3600);
-	
-	console.log(full_hours);
-
+	full_hours = Math.floor(t / 3600);	
 	hours = (t/3600) - full_hours;
 
 	full_minutes = Math.floor(hours * 60);
-	console.log(full_minutes);
-
 	minutes = (hours * 60) - full_minutes;
-	
-	console.log(minutes);
 
 	full_seconds = Math.floor(minutes * 60);
 
+	full_hours = (full_hours = 0) ? ( "" ) : full_hours + ":";
+	full_minutes = (full_minutes < 10) ? ("0" + full_minutes + ":") : full_minutes + ":";
 	full_seconds = (full_seconds < 10) ? ("0" + full_seconds) : full_seconds;
 
-	console.log(full_seconds);
+	return full_hours + full_minutes + full_seconds;
+}
+
+function format_track_time ( t ) {
 	
-	return full_hours + ":" + full_minutes + ":" + full_seconds;
+	full_hours = Math.floor(t / 3600);	
+	hours = (t/3600) - full_hours;
+
+	full_minutes = Math.floor(hours * 60);
+	minutes = (hours * 60) - full_minutes;
+
+	full_seconds = Math.floor(minutes * 60);
+
+	full_hours = (full_hours = 0) ? ( "" ) : full_hours + ":";
+	full_minutes = (full_minutes < 10) ? ("0" + full_minutes + ":") : full_minutes + ":";
+	full_seconds = (full_seconds < 10) ? ("0" + full_seconds) : full_seconds;
+
+	return full_hours + full_minutes + full_seconds;
 }
 
 		/*$('.mu-filter-imglink').magnificPopup({
