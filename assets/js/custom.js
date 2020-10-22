@@ -156,6 +156,8 @@
 	/*  6. ALBUM GALLERY FILTER CONTROLS
 	/* ----------------------------------------------------------- */ 
 	
+	$(function(){
+		gallery_controls();
 		$.getJSON( "assets/db/albums.json", function( data ) {
 			var albums = [];
 			
@@ -176,11 +178,13 @@
 		
 			});
 		});
+	});
 
 	/* ----------------------------------------------------------- */
 	/*  7. ALBUM GALLERY CONTROLS ( IMAGE LIGHTBOX )
 	/* ----------------------------------------------------------- */ 
-	$(function() {
+function gallery_controls() {
+		$(function() {
 		$.getJSON( "assets/db/albums.json", function( data ) {
 			var albums = [];
 			
@@ -209,6 +213,7 @@
 			  });
 		});
 	});
+}
 
 		$('.mu-filter-imglink').magnificPopup({
 			type: 'image',
