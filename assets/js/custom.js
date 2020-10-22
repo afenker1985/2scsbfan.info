@@ -172,7 +172,6 @@
 			$('.filtr-container').filterizr();
 
 			$('.mu-simplefilter li').click(function() {
-				alert("PASS!");
 		        $('.mu-simplefilter li').removeClass('active');
 		        $(this).addClass('active');
 		
