@@ -230,7 +230,7 @@ function album_date ( date_string ) {
 
 function format_album_time ( t ) {
 	console.log(t);
-	hours = t % 3600;
+	hours = Math.floor(t / 3600);
 	console.log(hours);
 	
 	return hours;
