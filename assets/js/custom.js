@@ -279,8 +279,8 @@ function create_track_listing ( album_list ) {
 		$.getJSON( "assets/db/album_songs.json", function( data ) {
 			var track_list = [];
 			$.each( data, function (key, val) {
-				if (val["album_id"] == v) {
-					console.log("Album|Song " + k + " " + val["song_id"] + "\n" );
+				if (val["album_id"] == k) {
+					console.log("Album|Song " + k + " " + val["song_id"] + "(key: " + key + ")\n" );
 				}
 			});
 			console.log("END OF ALBUM\n");
