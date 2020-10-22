@@ -196,22 +196,9 @@
 					albums.push( "</div>" );
 					albums.push( "</div>" );
 				}
-				console.log(albums);
 			});
 
-			console.log(albums);
-
-			var albumtester = "Test value<br />";
-
-			console.log("div.filtr-container1");
-
-			document.getElementsByClassName("filtr-container")[0].innerHTML = albumtester;
-
-			document.getElementsByClassName("filtr-container")[0].innerHTML = albumtester + albums.join("") + albumtester;
-
-			console.log(".filtr-container");
-
-			console.log(".mu-filter-imglink");
+			document.getElementsByClassName("filtr-container")[0].innerHTML = albums.join("");
 			
 			$('.mu-filter-imglink').magnificPopup({
 				type: 'image',
