@@ -217,7 +217,7 @@ function gallery_controls() {
 
 			document.getElementsByClassName("filtr-container")[0].innerHTML = albums.join("");
 
-			create_track_listing( join(album_list) );
+			create_track_listing( album_list.join() );
 			
 			$('.mu-filter-imglink').magnificPopup({
 				type: 'image',
