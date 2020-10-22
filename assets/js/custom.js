@@ -244,7 +244,9 @@ function format_album_time ( t ) {
 	
 	console.log(minutes);
 
-	full_seconds = minutes * 60;
+	full_seconds = Math.floor(minutes * 60);
+
+	full_seconds = (full_seconds < 10) ? ("0" + full_seconds) : full_seconds;
 
 	console.log(full_seconds);
 	
