@@ -230,10 +230,19 @@ function album_date ( date_string ) {
 
 function format_album_time ( t ) {
 	console.log(t);
-	hours = Math.floor(t / 3600);
-	console.log(hours);
+	full_hours = Math.floor(t / 3600);
+	console.log(full_hours);
+
+	hours = (t/3600) - full_hours;
+
+	full_minutes = Math.floor(hours * 60);
+	console.log(full_minutes);
+
+	minutes = hours * 60;
+	console.log(minutes);
+
 	
-	return hours;
+	return full_hours + ": " + full_minutes;
 }
 
 		/*$('.mu-filter-imglink').magnificPopup({
