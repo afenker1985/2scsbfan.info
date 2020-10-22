@@ -276,17 +276,15 @@ function format_track_time ( t ) {
 
 function create_track_listing ( album_list ) {
 	$.each( album_list, function (k, v) {
-		console.log("Album list: " + v + "\n");
 		
 		$.getJSON( "assets/db/album_songs.json", function( data ) {
-			console.log(data);
 
 			var track_list = [];
 
 			$.each( data, function (key, val) {
 				console.log("val: " + val + "\n");
 				if (val["album_id"] = v) {
-					console.log(val["song_id"] + "\n" );
+					console.log("Album|Song" + k + " " + val["song_id"] + "\n" );
 				}
 			});
 		});
