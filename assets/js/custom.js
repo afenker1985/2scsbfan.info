@@ -238,7 +238,7 @@ function format_album_time ( t ) {
 
 	full_seconds = Math.floor(minutes * 60);
 
-	full_hours = (full_hours = 0) ? ( "" ) : full_hours + ":";
+	full_hours = (full_hours > 0) ? ( full_hours + ":" ) : "";
 	full_minutes = (full_minutes < 10) ? ("0" + full_minutes + ":") : full_minutes + ":";
 	full_seconds = (full_seconds < 10) ? ("0" + full_seconds) : full_seconds;
 
