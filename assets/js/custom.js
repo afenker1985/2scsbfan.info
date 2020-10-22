@@ -188,17 +188,18 @@ function gallery_controls() {
 			var albums = [];
 			
 			$.each( data, function (key, val) {
-				if (Number.isInteger(parseInt(key))) {
+				if (Number.isInteger(parseInt(key)) && val["is_active"]==1) {
 					
 					albums.push( "<div class='col-sm-6 col-md-4 filtr-item' data-category='" + parseInt(key) + "'>" );
 					albums.push( "<div class='mu-item-thumbonail'>" );
 					albums.push( "<img class='img-responsive' src='assets/" + val["slug"] + ".jpg' alt='" + val["title"] + "'>" );
 					albums.push( "</div>" );
 					albums.push( "<div class='mu-filter-item-content'>" );
-					albums.push( "<h2 class='mu-filter-item-title'>" + val["title"] + "</h2>" );
-					albums.push( "<h4 class='mu-filter-item-title'>" + val["sub_title"] + "</h4>" );
-					albums.push( "<h5 class='mu-filter-item-title'>Released:" + album_date(val["release_date"]) + "</h5>" );
-					albums.push( "<h5 class='mu-filter-item-title'>" + val["tracks"] + " tracks (" + format_track_time(val["total_length"]) + ")</h5>" )
+					albums.push( "<h1 class='mu-filter-item-title'>" + val["title"] + "</h2>" );
+					albums.push( "<h3 class='mu-filter-item-title'>" + val["sub_title"] + "</h4>" );
+					albums.push( "<h4 class='mu-filter-item-title'>Released:" + album_date(val["release_date"]) + "</h5>" );
+					albums.push( "<h4 class='mu-filter-item-title'>" + val["tracks"] + " tracks (" + format_album_time(val["total_length"]) + ")</h5>" );
+					albums.push( "<p class='mu-filter-item-title'>&copy;" + val["label"] + "</p>" );
 					albums.push( "<a class='mu-filter-imglink' href='assets/" + val["slug"] + ".jpg' title='" + val["title"] + "'><i class='fa fa-info-circle'></i></a>" );
 					albums.push( "</div>" );
 					albums.push( "</div>" );
@@ -218,14 +219,14 @@ function gallery_controls() {
 	});
 }
 
-function album_date( date_string ) {
+function album_date ( date_string ) {
 	var options = { year: 'numeric', month: 'long', day: 'numeric' }
 	var d = new Date(date_string);
 
 	return d.toLocaleDateString("en-US", options);
 }
 
-function format_track_time( t ) {
+function format_album_time ( t ) {
 	formatted = new Date(t * 1000).toISOString().substr(11, 8);
 	return formatted;
 }
