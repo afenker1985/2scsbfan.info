@@ -186,7 +186,7 @@
 			
 			$.each( data, function (key, val) {
 				if (Number.isInteger(parseInt(key))) {
-					albums.push( "<div class='col-sm-6 col-md-4 filtr-item' data-category='" + parseInt(key) + "'></div>" );
+					albums.push( "<div class='col-sm-6 col-md-4 filtr-item' data-category='" + parseInt(key) + "'>" );
 					albums.push( "<div class='mu-item-thumbonail'>" );
 					albums.push( "<img class='img-responsive' src='assets/" + val["slug"] + ".jpg' alt='" + val["title"] + "'>" );
 					albums.push( "</div>" );
