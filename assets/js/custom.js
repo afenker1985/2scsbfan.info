@@ -276,7 +276,7 @@ function format_track_time ( t ) {
 
 function create_track_listing ( album_list ) {
 	$.each( album_list, function (k, v) {
-		
+		console.log("K " + k + " V " + v + "\n");
 		$.getJSON( "assets/db/album_songs.json", function( data ) {
 
 			var track_list = [];
