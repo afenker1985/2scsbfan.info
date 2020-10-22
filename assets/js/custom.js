@@ -217,7 +217,7 @@ function gallery_controls() {
 
 			document.getElementsByClassName("filtr-container")[0].innerHTML = albums.join("");
 
-			create_track_listing( album_list.join() );
+			create_track_listing( album_list );
 			
 			$('.mu-filter-imglink').magnificPopup({
 				type: 'image',
@@ -274,15 +274,17 @@ function format_track_time ( t ) {
 	return full_hours + full_minutes + full_seconds;
 }
 
-function create_track_listing ( album_number ) {
-	
-	$.getJSON( "assets/db/albums_songs.json", function( data ) {
-		var track_list = [];
+function create_track_listing ( album_list ) {
+	$.each( album_list, function (k, v) {
+		console.log("Album list: " + v + "\n");
+		$.getJSON( "assets/db/albums_songs.json", function( data ) {
+			var track_list = [];
 
-		$.each( data, function (key, val) {
-			if (val["album_id"] = album_number) {
-				console.log(val["song_id"] + "\n" );
-			}
+			$.each( data, function (key, val) {
+				if (val["album_id"] = v) {
+					console.log(val["song_id"] + "\n" );
+				}
+			});
 		});
 	});
 }
