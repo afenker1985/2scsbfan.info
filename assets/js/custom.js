@@ -206,11 +206,14 @@ function gallery_controls() {
 					albums.push( "</div>" );
 					albums.push( "</div>" );
 				}
+
+				create_track_listing( key );
+				
 			});
 
 			document.getElementsByClassName("filtr-container")[0].innerHTML = albums.join("");
 
-			create_track_listing( key );
+			
 			
 			$('.mu-filter-imglink').magnificPopup({
 				type: 'image',
