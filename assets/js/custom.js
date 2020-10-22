@@ -187,8 +187,11 @@ function gallery_controls() {
 		$(function() {
 		$.getJSON( "assets/db/albums.json", function( data ) {
 			var albums = [];
+
+			var album_list = [];
 			
 			$.each( data, function (key, val) {
+
 				if (Number.isInteger(parseInt(key)) && val["is_active"]==1) {
 					
 					albums.push( "<div class='col-sm-6 col-md-4 filtr-item' data-category='" + parseInt(key) + "'>" );
@@ -205,15 +208,16 @@ function gallery_controls() {
 					albums.push( "<a class='mu-filter-imglink' href='assets/" + val["slug"] + ".jpg' title='" + val["title"] + "'><i class='fa fa-info-circle'></i></a>" );
 					albums.push( "</div>" );
 					albums.push( "</div>" );
+						
+					album_list[key] = key;
+
 				}
 
-				create_track_listing( key );
-				
 			});
 
 			document.getElementsByClassName("filtr-container")[0].innerHTML = albums.join("");
 
-			
+			create_track_listing( join(album_list) );
 			
 			$('.mu-filter-imglink').magnificPopup({
 				type: 'image',
