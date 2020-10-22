@@ -697,7 +697,7 @@ button:focus {
 	right: 16px;
 	bottom: 16px;
 	color: #fff;
-	padding-top: 2.5%;
+	padding-top: 0;
 	text-align: center;
 	-webkit-transition: all 0.5s;
 	transition: all 0.5s;
