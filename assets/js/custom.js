@@ -189,18 +189,16 @@ function gallery_controls() {
 			
 			$.each( data, function (key, val) {
 				if (Number.isInteger(parseInt(key))) {
-					var options = { year: 'numeric', month: 'long', day: 'numeric' }
-					var d = new Date(val["release_date"]);
-
-					d = d.toLocaleDateString("en-US", options);
-
+					
 					albums.push( "<div class='col-sm-6 col-md-4 filtr-item' data-category='" + parseInt(key) + "'>" );
 					albums.push( "<div class='mu-item-thumbonail'>" );
 					albums.push( "<img class='img-responsive' src='assets/" + val["slug"] + ".jpg' alt='" + val["title"] + "'>" );
 					albums.push( "</div>" );
 					albums.push( "<div class='mu-filter-item-content'>" );
 					albums.push( "<h2 class='mu-filter-item-title'>" + val["title"] + "</h2>" );
-					albums.push( "<h4 class='mu-filter-item-title'>" + d + "</h4>" );
+					albums.push( "<h3 class='mu-filter-item-title'>" + val["sub_title"] + "</h3>" );
+					albums.push( "<h4 class='mu-filter-item-title'>Release Date:" + album_date(val["release_date"]) + "</h4>" );
+					albums.push( "<h4 class='mu-filter-item-title'>Release Date:" + album_date(val["release_date"]) + "</h4>" )
 					albums.push( "<a class='mu-filter-imglink' href='assets/" + val["slug"] + ".jpg' title='" + val["title"] + "'><i class='fa fa-info-circle'></i></a>" );
 					albums.push( "</div>" );
 					albums.push( "</div>" );
@@ -220,7 +218,14 @@ function gallery_controls() {
 	});
 }
 
-		$('.mu-filter-imglink').magnificPopup({
+function album_date( date_string ) {
+	var options = { year: 'numeric', month: 'long', day: 'numeric' }
+	var d = new Date(date_string);
+
+	return d.toLocaleDateString("en-US", options);
+}
+
+		/*$('.mu-filter-imglink').magnificPopup({
 			type: 'image',
 			mainClass: 'mfp-fade',
 			gallery:{
