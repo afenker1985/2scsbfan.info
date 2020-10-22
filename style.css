@@ -697,7 +697,7 @@ button:focus {
 	right: 16px;
 	bottom: 16px;
 	color: #fff;
-	padding-top: 25px;
+	padding-top: 5%;
 	text-align: center;
 	-webkit-transition: all 0.5s;
 	transition: all 0.5s;
@@ -724,7 +724,7 @@ button:focus {
 }
 
 .filtr-item:hover .mu-filter-item-content{
-	opacity: 0.94;
+	opacity: 0.75;
 }
 
 .mu-filter-link,
