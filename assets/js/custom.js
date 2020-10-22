@@ -263,7 +263,7 @@ function format_track_time ( t ) {
 }
 
 function create_track_listing ( album_number ) {
-	alert("Album Number " + album_number);
+	console.log("Album Number " + album_number);
 }
 
 		/*$('.mu-filter-imglink').magnificPopup({
