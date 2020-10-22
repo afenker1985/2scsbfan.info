@@ -284,7 +284,7 @@ function create_track_listing ( album_list ) {
 			$.each( data, function (key, val) {
 				console.log("val: " + val + "\n");
 				if (val["album_id"] = v) {
-					console.log("Album|Song" + k + " " + val["song_id"] + "\n" );
+					console.log("Album|Song " + k + " " + val["song_id"] + "\n" );
 				}
 			});
 		});
