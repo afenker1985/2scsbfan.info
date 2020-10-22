@@ -196,9 +196,9 @@ function gallery_controls() {
 					albums.push( "</div>" );
 					albums.push( "<div class='mu-filter-item-content'>" );
 					albums.push( "<h2 class='mu-filter-item-title'>" + val["title"] + "</h2>" );
-					albums.push( "<h3 class='mu-filter-item-title'>" + val["sub_title"] + "</h3>" );
-					albums.push( "<h4 class='mu-filter-item-title'>Release Date:" + album_date(val["release_date"]) + "</h4>" );
-					albums.push( "<h4 class='mu-filter-item-title'>Release Date:" + album_date(val["release_date"]) + "</h4>" )
+					albums.push( "<h4 class='mu-filter-item-title'>" + val["sub_title"] + "</h4>" );
+					albums.push( "<h5 class='mu-filter-item-title'>Released:" + album_date(val["release_date"]) + "</h5>" );
+					albums.push( "<h5 class='mu-filter-item-title'>" + val["tracks"] + " tracks (" + format_track_time(val["total_length"]) + ")</h5>" )
 					albums.push( "<a class='mu-filter-imglink' href='assets/" + val["slug"] + ".jpg' title='" + val["title"] + "'><i class='fa fa-info-circle'></i></a>" );
 					albums.push( "</div>" );
 					albums.push( "</div>" );
@@ -223,6 +223,11 @@ function album_date( date_string ) {
 	var d = new Date(date_string);
 
 	return d.toLocaleDateString("en-US", options);
+}
+
+function format_track_time( t ) {
+	formatted = new Date(t * 1000).toISOString().substr(11, 8);
+	return formatted;
 }
 
 		/*$('.mu-filter-imglink').magnificPopup({
