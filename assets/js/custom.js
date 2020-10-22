@@ -189,12 +189,18 @@ function gallery_controls() {
 			
 			$.each( data, function (key, val) {
 				if (Number.isInteger(parseInt(key))) {
+					var options = { year: 'numeric', month: 'long', day: 'numeric' }
+					var d = new Date(val["release-date"]);
+
+					d = d.toLocaleDateString("en-US", options);
+
 					albums.push( "<div class='col-sm-6 col-md-4 filtr-item' data-category='" + parseInt(key) + "'>" );
 					albums.push( "<div class='mu-item-thumbonail'>" );
 					albums.push( "<img class='img-responsive' src='assets/" + val["slug"] + ".jpg' alt='" + val["title"] + "'>" );
 					albums.push( "</div>" );
 					albums.push( "<div class='mu-filter-item-content'>" );
 					albums.push( "<h4 class='mu-filter-item-title'>" + val["title"] + "</h4>" );
+					albums.push( "<h2 class='mu-filter-item-title'>" + d + "</h2>" );
 					albums.push( "<a class='mu-filter-imglink' href='assets/" + val["slug"] + ".jpg' title='" + val["title"] + "'><i class='fa fa-info-circle'></i></a>" );
 					albums.push( "</div>" );
 					albums.push( "</div>" );
