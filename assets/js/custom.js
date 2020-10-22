@@ -230,14 +230,17 @@ function album_date ( date_string ) {
 
 function format_album_time ( t ) {
 	
+	//Calculate Hours
 	full_hours = Math.floor(t / 3600);
 	hours = (t/3600) - full_hours;
 
+	//Calculate Minutes
 	full_minutes = Math.floor(hours * 60);
 	minutes = (hours * 60) - full_minutes;
 
+	//Calculate Seconds
 	full_seconds = Math.floor(minutes * 60);
-	console.log(full_hours);
+	
 	full_hours = (full_hours > 0) ? ( full_hours + ":" ) : "";
 	full_minutes = (full_minutes < 10) ? ("0" + full_minutes + ":") : full_minutes + ":";
 	full_seconds = (full_seconds < 10) ? ("0" + full_seconds) : full_seconds;
