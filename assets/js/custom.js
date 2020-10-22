@@ -202,7 +202,7 @@ function gallery_controls() {
 					albums.push( "<h4 class='mu-filter-item-title'>Released: " + album_date(val["release_date"]) + "</h5>" );
 					albums.push( "<h4 class='mu-filter-item-title'>" + val["tracks"] + " tracks (" + format_album_time(val["total_length"]) + ")</h5>" );
 					albums.push( "<h5 class='mu-filter-item-title'>&copy; " + val["label"] + "</h5>" );
-					albums.push( "<a class='mu-filter-imglink' href='assets/" + val["slug"] + ".jpg' title='" + val["title"] + "'><i class='fa fa-info-circle'></i></a>" );
+					albums.push( "<a href='javascript:create_track_listing(" + val["slug"] + ")' id='" + val["title"] + "'><i class='fa fa-info-circle'></i></a>" );
 					albums.push( "</div>" );
 					albums.push( "</div>" );
 				}
@@ -260,6 +260,10 @@ function format_track_time ( t ) {
 	full_seconds = (full_seconds < 10) ? ("0" + full_seconds) : full_seconds;
 
 	return full_hours + full_minutes + full_seconds;
+}
+
+function create_track_listing ( album_number ) {
+	alert('PASS!');
 }
 
 		/*$('.mu-filter-imglink').magnificPopup({
