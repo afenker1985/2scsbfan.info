@@ -229,8 +229,10 @@ function album_date ( date_string ) {
 }
 
 function format_album_time ( t ) {
-	formatted = new Date(t * 1000).toISOString().substr(11, 8);
-	return formatted;
+	hours = t % 3600;
+	alert(hours);
+	minutes = Math.floor(((t/3600) - Math.floor(t)) * 60);
+	alert(minutes);
 }
 
 		/*$('.mu-filter-imglink').magnificPopup({
