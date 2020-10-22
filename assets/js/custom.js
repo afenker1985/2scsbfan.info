@@ -197,6 +197,7 @@ function gallery_controls() {
 					albums.push( "<div class='mu-filter-item-content'>" );
 					albums.push( "<h1 class='mu-filter-item-title'>" + val["title"] + "</h2>" );
 					albums.push( "<h4 class='mu-filter-item-title'>" + val["sub_title"] + "</h4>" );
+					albums.push( "<span class='mu-header-dot' style='background-color: white'></span>" );
 					albums.push( "<h4 class='mu-filter-item-title'>Released: " + album_date(val["release_date"]) + "</h5>" );
 					albums.push( "<h4 class='mu-filter-item-title'>" + val["tracks"] + " tracks (" + format_album_time(val["total_length"]) + ")</h5>" );
 					albums.push( "<h5 class='mu-filter-item-title'>&copy; " + val["label"] + "</h5>" );
