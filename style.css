@@ -767,6 +767,7 @@ span[id^="list-track-"]:hover,
 span[id^="list-track-"]:focus {
 	cursor: pointer;
 	background-color: #fff;
+	color: #4568DC;
 }
 
 .mu-filter-link:hover,
