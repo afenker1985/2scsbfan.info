@@ -219,9 +219,14 @@
 
 	<script type="text/javascript">
 		$(document).ready(function() {
+			console.log("[id^='list-track']");
 			$("[id^='list-track-']").click( function() {
 				console.log("BUTTON CLICKED!\n");
 			});
+		});
+		console.log("[id^='list-track']");
+		$(document).ready(function() {
+			$("[id^='list-track']").click( console.log("BUTTON CLICKED!\n"));
 		});
 	</script>
 
