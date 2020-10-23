@@ -230,7 +230,18 @@ function gallery_controls() {
 }
 
 //$('span[id^="list-track-"]').click(create_track_listing( this.id ));
+$(document).ready(function() {
+	setTimeout(function() {
+				
+		$(".list-track").click( function() {
+			
+			create_track_listing ( this.id );
 
+		});
+
+	}, 2000);
+
+});
 
 function album_date ( date_string ) {
 	var options = { year: 'numeric', month: 'long', day: 'numeric' }
