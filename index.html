@@ -219,10 +219,13 @@
 
 	<script type="text/javascript">
 		$(document).ready(function() {
-			console.log(document.getElementById("[class^='list-track']"));
+			console.log(document.getElementsByClassName("[class^='list-track']")[0]);
+			
 			$("[class^='list-track']").click( function() {
+				console.log(document.getElementsByClassName("[class^='list-track']")[0]);
 				console.log("BUTTON CLICKED!\n");
 			});
+
 		});
 		console.log("[class^='list-track']");
 		$(document).ready(function() {
