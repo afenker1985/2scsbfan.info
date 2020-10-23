@@ -746,6 +746,27 @@ button:focus {
 	
 }
 
+span[id^="list-track-"] {
+	border-radius: 50%;
+    background: #1b1c29;
+    color: #fff;
+    height: 35px;
+    padding: 0 6px;
+    width: 35px;
+    line-height: 35px;
+    display: inline-block;
+    font-size: 15px;
+    margin-right: 10px;
+    margin-top: 5px;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+span[id^="list-track-"]:hover {
+	cursor: pointer;
+}
+
 .mu-filter-link:hover,
 .mu-filter-imglink:hover,
 .mu-filter-link:focus,
