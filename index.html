@@ -220,19 +220,15 @@
 	<script type="text/javascript">
 		$(document).ready(function() {
 			setTimeout(function() {
-			console.log(document.getElementsByClassName("list-track")[0] + " check 1");
-			
-			$("[class^='list-track']").click( function() {
-				console.log(document.getElementsByClassName("list-track")[0] + " check 2");
-				console.log("BUTTON CLICKED!\n");
-			});
+						
+				$(".list-track").click( function() {
+					
+					create_track_listing ( this.id );
+
+				});
+
 			}, 2000);
 
-		});
-		
-		$(document).ready(function() {
-			console.log(".list-track" + " check 3");
-			$(".list-track").click( console.log("BUTTON CLICKED 2!\n"));
 		});
 	</script>
 
