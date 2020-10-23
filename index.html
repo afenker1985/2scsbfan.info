@@ -217,7 +217,9 @@
     <!-- Custom js -->
 	<script type="text/javascript" src="assets/js/custom.js"></script>
 
-	
+	<script type="text/javascript">
+		$('[id*="list-track-"]').onclick = create_track_listing( this.id );
+	</script>
 
   </body>
 </html>

@@ -217,9 +217,6 @@ function gallery_controls() {
 			});
 
 			document.getElementsByClassName("filtr-container")[0].innerHTML = albums.join("");
-
-
-			$('[id*="list-track-"]').onclick = create_track_listing( this.id );
 			
 			$('.mu-filter-imglink').magnificPopup({
 				type: 'image',
