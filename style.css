@@ -763,8 +763,10 @@ span[id^="list-track-"] {
     transition: all 0.5s;
 }
 
-span[id^="list-track-"]:hover {
+span[id^="list-track-"]:hover,
+span[id^="list-track-"]:focus {
 	cursor: pointer;
+	background-color: #fff;
 }
 
 .mu-filter-link:hover,
