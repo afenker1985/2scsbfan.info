@@ -230,7 +230,7 @@ function gallery_controls() {
 }
 
 //$('span[id^="list-track-"]').click(create_track_listing( this.id ));
-$('[id*="list-track-"]').click(console.log("BUTTON CLICKED!\n"));
+$("[id*='list-track-']").click(console.log("BUTTON CLICKED!\n"));
 
 function album_date ( date_string ) {
 	var options = { year: 'numeric', month: 'long', day: 'numeric' }
