@@ -229,7 +229,6 @@ function gallery_controls() {
 	});
 }
 
-//$('span[id^="list-track-"]').click(create_track_listing( this.id ));
 $(document).ready(function() {
 	setTimeout(function() {
 				
@@ -289,16 +288,14 @@ function format_track_time ( t ) {
 
 function create_track_listing ( album_number ) {
 	console.log("Album number: " + album_number + "\n");
-	$.each( album_number, function (k, v) {
-		$.getJSON( "assets/db/album_songs.json", function( data ) {
-			var track_list = [];
-			$.each( data, function (key, val) {
-				if (val["album_id"] == k) {
-					console.log("Album|Song " + k + " " + val["song_id"] + "(key: " + key + ")\n" );
-				}
-			});
-			console.log("END OF ALBUM\n");
+	$.getJSON( "assets/db/album_songs.json", function( data ) {
+		var track_list = [];
+		$.each( data, function (key, val) {
+			if (val["album_id"] == k) {
+				console.log("Album|Song " + album_number + " " + val["song_id"] + "(key: " + key + ")\n" );
+			}
 		});
+		console.log("END OF ALBUM\n");
 	});
 }
 
