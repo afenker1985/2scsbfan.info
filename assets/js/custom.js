@@ -207,7 +207,7 @@ function gallery_controls() {
 					albums.push( "<h4 class='mu-filter-item-title'>" + val["tracks"] + " tracks (" + format_album_time(val["total_length"]) + ")</h5>" );
 					albums.push( "<h5 class='mu-filter-item-title'>&copy; " + val["label"] + "</h5>" );
 					albums.push( "<a class='mu-filter-imglink' href='assets/" + val["slug"] + ".jpg' title='" + val["title"] + "'" + "id='" + key + "'><i class='fa fa-info-circle'></i></a>" );
-					albums.push( "<span id='list-track-" + key + "'><i class='fa fa-question-circle'></i></span>" );
+					albums.push( "<span class='list-track-" + key + "'><i class='fa fa-question-circle'></i></span>" );
 					albums.push( "</div>" );
 					albums.push( "</div>" );
 						
