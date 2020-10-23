@@ -207,6 +207,7 @@ function gallery_controls() {
 					albums.push( "<h4 class='mu-filter-item-title'>" + val["tracks"] + " tracks (" + format_album_time(val["total_length"]) + ")</h5>" );
 					albums.push( "<h5 class='mu-filter-item-title'>&copy; " + val["label"] + "</h5>" );
 					albums.push( "<a class='mu-filter-imglink' href='assets/" + val["slug"] + ".jpg' title='" + val["title"] + "'" + "id='" + key + "'><i class='fa fa-info-circle'></i></a>" );
+					albums.push( "<span class='mu-filter-imglink' id='list-track-" + key + "'><i class='fas fa-question-circle'></i></a>" );
 					albums.push( "</div>" );
 					albums.push( "</div>" );
 						
@@ -217,9 +218,8 @@ function gallery_controls() {
 
 			document.getElementsByClassName("filtr-container")[0].innerHTML = albums.join("");
 
-			
 
-			$('.mu-filter-imglink').onclick = create_track_listing( this.id );
+			$('[id*="list-track-"]').onclick = create_track_listing( this.id );
 			
 			$('.mu-filter-imglink').magnificPopup({
 				type: 'image',
@@ -276,8 +276,9 @@ function format_track_time ( t ) {
 	return full_hours + full_minutes + full_seconds;
 }
 
-function create_track_listing ( album_list ) {
-	$.each( album_list, function (k, v) {
+function create_track_listing ( album_number ) {
+	console.log("Album number: " + album_number + "\n");
+	$.each( album_number, function (k, v) {
 		$.getJSON( "assets/db/album_songs.json", function( data ) {
 			var track_list = [];
 			$.each( data, function (key, val) {
