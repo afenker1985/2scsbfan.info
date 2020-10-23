@@ -219,7 +219,9 @@
 
 	<script type="text/javascript">
 		$(document).ready(function() {
-			$("[id^='list-track-']").click( console.log("BUTTON CLICKED!\n") );
+			$("[id^='list-track-']").click( function() {
+				console.log("BUTTON CLICKED!\n");
+			});
 		});
 	</script>
 
