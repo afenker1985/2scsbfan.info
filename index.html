@@ -219,12 +219,14 @@
 
 	<script type="text/javascript">
 		$(document).ready(function() {
+			setTimeout(function() {
 			console.log(document.getElementsByClassName("list-track")[0] + " check 1");
 			
 			$("[class^='list-track']").click( function() {
 				console.log(document.getElementsByClassName("list-track")[0] + " check 2");
 				console.log("BUTTON CLICKED!\n");
 			});
+			}, 2000);
 
 		});
 		
