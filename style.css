@@ -746,7 +746,7 @@ button:focus {
 	
 }
 
-span[id^="list-track-"] {
+.list-track {
 	border-radius: 50%;
     background: #1b1c29;
     color: #fff;
@@ -763,8 +763,8 @@ span[id^="list-track-"] {
     transition: all 0.5s;
 }
 
-span[id^="list-track-"]:hover,
-span[id^="list-track-"]:focus {
+.list-track:hover,
+.list-track:focus {
 	cursor: pointer;
 	background-color: #fff;
 	color: #4568DC;
