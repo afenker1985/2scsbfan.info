@@ -229,7 +229,7 @@ function gallery_controls() {
 	});
 }
 
-document.getElementById('span[id^="list-track-"]').onclick = create_track_listing( this.id );
+$('span[id^="list-track-"]').click(create_track_listing( this.id ));
 
 function album_date ( date_string ) {
 	var options = { year: 'numeric', month: 'long', day: 'numeric' }
