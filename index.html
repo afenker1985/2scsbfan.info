@@ -219,18 +219,18 @@
 
 	<script type="text/javascript">
 		$(document).ready(function() {
-			console.log(document.getElementsByClassName("[class^='list-track']")[0] + " check 1");
+			console.log(document.getElementsByClassName("list-track")[0] + " check 1");
 			
 			$("[class^='list-track']").click( function() {
-				console.log(document.getElementsByClassName("[class^='list-track']")[0] + " check 2");
+				console.log(document.getElementsByClassName("list-track")[0] + " check 2");
 				console.log("BUTTON CLICKED!\n");
 			});
 
 		});
 		
 		$(document).ready(function() {
-			console.log("[class^='list-track']" + " check 3");
-			$("[class^='list-track']").click( console.log("BUTTON CLICKED 2!\n"));
+			console.log(".list-track" + " check 3");
+			$(".list-track").click( console.log("BUTTON CLICKED 2!\n"));
 		});
 	</script>
 
