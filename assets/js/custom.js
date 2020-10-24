@@ -294,8 +294,8 @@ function create_track_listing ( album_number ) {
 				track_list.push(val["song_id"]);
 			}
 		});
+		return track_list;
 	});
-	return track_list;
 }
 
 function create_track_table ( track_list ) {
