@@ -233,9 +233,7 @@ $(document).ready(function() {
 	setTimeout(function() {
 				
 		$(".list-track").click( function() {
-			
-			create_track_listing ( this.id );
-
+			create_track_table( create_track_listing ( this.id ) );
 		});
 
 	}, 2000);
@@ -294,10 +292,8 @@ function create_track_listing ( album_number ) {
 			if ( val["album_id"] == album_number ) {
 				
 				track_list.push(val["song_id"]);
-				console.log( track_list );
 			}
 		});
-		console.log("END OF ALBUM\n");
 	});
 }
 
@@ -305,12 +301,14 @@ function create_track_table ( track_list ) {
 
 	$.getJSON( "assets/db/songs.json", function ( data ) {
 		var songs = [];
-		$.each( track_list, function (k, v) {
-			$.each( data, function (key, val) {
-				
-			});
-		});
 		
+		var i = 0;
+		$.each( data, function (key, val) {
+			if (key = track_list[i]) {
+				songs[i] = val;
+			}
+		});
+		console.log( songs );
 	});
 }
 
