@@ -292,7 +292,9 @@ function create_track_listing ( album_number ) {
 		var track_list = [];
 		$.each( data, function (key, val) {
 			if ( val["album_id"] == album_number ) {
-				console.log("Album|Song " + album_number + " " + val["song_id"] + "(key: " + key + ")\n" );
+				
+				track_list.push(val[song_id]);
+				console.log( track_list );
 			}
 		});
 		console.log("END OF ALBUM\n");
