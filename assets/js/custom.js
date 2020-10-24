@@ -235,7 +235,7 @@ $(document).ready(function() {
 			var list = create_track_listing ( this.id );
 			setTimeout(function() {
 				var table = create_track_table( list );
-			},300);
+			}, 500);
 		});
 
 	}, 400);
