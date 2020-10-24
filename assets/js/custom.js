@@ -230,14 +230,13 @@ function gallery_controls() {
 }
 
 $(document).ready(function() {
-	setTimeout(function() {
-				
+	setTimeout(function() {	
 		$(".list-track").click( function() {
 			var list = create_track_listing ( this.id );
 			var table = create_track_table( list );
 		});
 
-	}, 2000);
+	}, 100);
 
 });
 
