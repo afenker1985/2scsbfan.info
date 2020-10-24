@@ -290,7 +290,7 @@ function create_track_listing ( album_number ) {
 	$.getJSON( "assets/db/album_songs.json", function( data ) {
 		var track_list = [];
 		$.each( data, function (key, val) {
-			if ( val["album_id"] == album_number ) {
+			if ( val["album_id"] = album_number ) {
 				track_list.push(val["song_id"]);
 			}
 		});
