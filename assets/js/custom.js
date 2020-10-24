@@ -233,7 +233,8 @@ $(document).ready(function() {
 	setTimeout(function() {
 				
 		$(".list-track").click( function() {
-			create_track_table( create_track_listing ( this.id ) );
+			var list = create_track_listing ( this.id );
+			var table = create_track_table( list );
 		});
 
 	}, 2000);
