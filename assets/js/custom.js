@@ -301,7 +301,18 @@ function create_track_listing ( album_number ) {
 	});
 }
 
+function create_track_table ( track_list ) {
 
+	$.getJSON( "assets/db/songs.json", function ( data ) {
+		var songs = [];
+		$.each( track_list, function (k, v) {
+			$.each( data, function (key, val) {
+				
+			});
+		});
+		
+	});
+}
 
 		/*$('.mu-filter-imglink').magnificPopup({
 			type: 'image',
