@@ -298,7 +298,7 @@ function create_track_listing ( album_number ) {
 }
 
 function create_track_table ( track_list ) {
-
+	console.log(track_list);
 	$.getJSON( "assets/db/songs.json", function ( data ) {
 		var songs = [];
 		
