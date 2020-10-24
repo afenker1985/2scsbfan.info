@@ -236,7 +236,7 @@ $(document).ready(function() {
 			var table = create_track_table( list );
 		});
 
-	}, 100);
+	}, 500);
 
 });
 
