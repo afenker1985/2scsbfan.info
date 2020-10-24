@@ -296,22 +296,23 @@ function create_track_listing ( album_number ) {
 				track_list.push(val["song_id"]);
 			}
 		});
+		console.log("track list " + track_list + "\n");
 		return track_list;
 	});
 }
 
-function create_track_table ( track_list ) {
-	console.log(track_list);
+function create_track_table ( t_list ) {
+	console.log("t_list " + t_list + "\n");
 	$.getJSON( "assets/db/songs.json", function ( data ) {
 		var songs = [];
 		
 		var i = 0;
 		$.each( data, function (key, val) {
-			if (key = track_list[i]) {
+			if (key = t_list[i]) {
 				songs[i] = val;
 			}
 		});
-		console.log( songs );
+		console.log("songs " + songs + "\n");
 	});
 }
 
