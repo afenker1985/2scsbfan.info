@@ -234,6 +234,7 @@ $(document).ready(function() {
 		$(".list-track").click( function() {
 			var list = create_track_listing ( this.id );
 			setTimeout(function() {
+				console.log(list + "\n");
 				var table = create_track_table( list );
 			}, 500);
 		});
