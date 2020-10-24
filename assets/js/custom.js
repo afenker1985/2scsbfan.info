@@ -293,13 +293,15 @@ function create_track_listing ( album_number ) {
 		$.each( data, function (key, val) {
 			if ( val["album_id"] == album_number ) {
 				
-				track_list.push(val[song_id]);
+				track_list.push(val["song_id"]);
 				console.log( track_list );
 			}
 		});
 		console.log("END OF ALBUM\n");
 	});
 }
+
+
 
 		/*$('.mu-filter-imglink').magnificPopup({
 			type: 'image',
