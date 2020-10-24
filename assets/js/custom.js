@@ -232,20 +232,9 @@ function gallery_controls() {
 $(document).ready(function() {
 	setTimeout(function() {	
 		$(".list-track").click( function() {
-			
-			var list = create_track_listing ( this.id );
-			console.log(list + " before timeout\n");
-			
-			setTimeout(function() {
-				console.log(list + " inside timeout \n");
-				var table = create_track_table( list );
-			}, 500);
-
-			console.log("attempt 2");
-
 			list = create_track_listing (this.id, function() {
 				cosole.log(list);
-				create_track_table( list );
+				create_track_table("list " + list );
 			});
 		});
 	}, 400);
