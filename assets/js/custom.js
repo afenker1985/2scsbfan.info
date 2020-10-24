@@ -233,9 +233,7 @@ $(document).ready(function() {
 	setTimeout(function() {
 				
 		$(".list-track").click( function() {
-			console.log(this.id);
-			list = create_track_listing ( this.id );
-			create_track_table( list );
+			create_track_table( create_track_listing ( this.id ) );
 		});
 
 	}, 2000);
@@ -294,7 +292,6 @@ function create_track_listing ( album_number ) {
 				track_list.push(val["song_id"]);
 			}
 		});
-		console.log (track_list + " from create_track_listing\n");
 		return track_list;
 	});
 }
