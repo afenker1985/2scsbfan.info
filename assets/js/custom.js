@@ -233,6 +233,7 @@ $(document).ready(function() {
 	setTimeout(function() {
 				
 		$(".list-track").click( function() {
+			console.log(this.id);
 			list = create_track_listing ( this.id );
 			create_track_table( list );
 		});
@@ -286,16 +287,15 @@ function format_track_time ( t ) {
 }
 
 function create_track_listing ( album_number ) {
-	console.log("Album number: " + album_number + "\n");
 	$.getJSON( "assets/db/album_songs.json", function( data ) {
 		var track_list = [];
 		$.each( data, function (key, val) {
 			if ( val["album_id"] == album_number ) {
-				
 				track_list.push(val["song_id"]);
 			}
 		});
 	});
+	return track_list;
 }
 
 function create_track_table ( track_list ) {
